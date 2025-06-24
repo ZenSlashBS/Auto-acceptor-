@@ -3,9 +3,9 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, User, ChatJoinRequest
 
 # Manually setting the bot token and API credentials
-environ["BOT_TOKEN"] = "7740922993:AAFPzuwZDAfUuyMEgQFg0iMnGfCD9cmwiPs"
-environ["API_ID"] = "25707779"  # Replace with your actual API ID
-environ["API_HASH"] = "929888fadc26c0670e78e16fe0a3aa6a"  # Replace with your actual API hash
+environ["BOT_TOKEN"] = "" # Replace with your Bot Token
+environ["API_ID"] = ""  # Replace with your API ID
+environ["API_HASH"] = ""  # Replace with your API hash
 
 pr0fess0r_99 = Client(
     "Auto Approved Bot",
@@ -20,9 +20,9 @@ async def start(client: pr0fess0r_99, message: Message):
     approvedbot = await client.get_me()  # Get bot information (includes bot username)
     
     button = [
-        [InlineKeyboardButton("Add Me In Chat ➕", url="http://t.me/Tesialbot?startgroup=botstart"),
-         InlineKeyboardButton("Add Me In Channel ➕", url="http://t.me/Tesialbot?startchannel=botstart")],
-        [InlineKeyboardButton("🗿 Owner", url="t.me/ZyncMaster")]
+        [InlineKeyboardButton("Add Me In Chat ➕", url="http://t.me/<BOTUSERNAME>?startgroup=botstart"),
+         InlineKeyboardButton("Add Me In Channel ➕", url="http://t.me/<BOTUSERNAME>?startchannel=botstart")],
+        [InlineKeyboardButton("🗿 Owner", url="t.me/username")]
     ]
     
     # Send the welcome message with bold text and buttons
@@ -46,13 +46,13 @@ async def auto_approve(client: pr0fess0r_99, message: ChatJoinRequest):
 
     # Send the welcome message to the user via private chat (DM)
     # Customized text as per your requirement
-    greeting_text = f"**Hello {user.first_name}, welcome to 𝐒𝐚𝐲𝐚𝐩𝐫𝐨.𝐮𝐬!\n\nThank you for joining. We suggest you to also check out our other channels for more exciting content!"
+    greeting_text = f"**Hello {user.first_name}, welcome to OUR Channel!\n\nThank you for joining. We suggest you to also check out our other channels for more exciting content!"
 
     # Buttons for channel invites (add your actual invite links here)
     buttons = [
-        [InlineKeyboardButton("Free Netflix", url="https://t.me/+IoncB0Cb_TtmNjgx"),
-         InlineKeyboardButton("New Methods!", url="https://t.me/+8TRISU5dGkEwNmU1")],
-        [InlineKeyboardButton("Paid Course For Free", url="https://t.me/+SUcGBh1hWxlhZDUx")]
+        [InlineKeyboardButton("BTN-NAME1", url="channel_link1"),
+         InlineKeyboardButton("BTN-NAME2", url="channel_link2")],
+        [InlineKeyboardButton("BTN-NAME3", url="channel_link3")]
     ]
     
     # Send the customized greeting message with buttons to the user's private chat (DM)
